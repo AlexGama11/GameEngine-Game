@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release Win-x86|Win32">
+      <Configuration>Release Win-x86</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Win-x86|Win32">
+      <Configuration>Debug Win-x86</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D57F5287-4135-CB7C-CA29-C55336DEC180}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Game Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win-x86|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win-x86|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release Win-x86|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug Win-x86|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win-x86|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\Build\bin\Release\Win-x86\</OutDir>
+    <IntDir>..\Build\obj\Release\Win-x86\</IntDir>
+    <TargetName>Game Engine</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <LibraryPath>..\devlib\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win-x86|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\Build\bin\Debug\Win-x86\</OutDir>
+    <IntDir>..\Build\obj\Debug\Win-x86\</IntDir>
+    <TargetName>Game Engine</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <LibraryPath>..\devlib\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win-x86|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src\Header Files;..\src\Header Files\Engine Code;..\src\Header Files\Game Code;..\devlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_TTF.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST ..\dlls\**.dll\ (xcopy /Q /E /Y /I ..\dlls\**.dll ..\Build\bin\Release\Win-x86 &gt; nul) ELSE (xcopy /Q /Y /I ..\dlls\**.dll ..\Build\bin\Release\Win-x86 &gt; nul)</Command>
+    </PostBuildEvent>
+    <BuildLog>
+      <Path>..\Build\obj\Win-x86\Release\$(ProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win-x86|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src\Header Files;..\src\Header Files\Engine Code;..\src\Header Files\Game Code;..\devlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_TTF.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST ..\dlls\**.dll\ (xcopy /Q /E /Y /I ..\dlls\**.dll ..\Build\bin\Debug\Win-x86 &gt; nul) ELSE (xcopy /Q /Y /I ..\dlls\**.dll ..\Build\bin\Debug\Win-x86 &gt; nul)</Command>
+    </PostBuildEvent>
+    <BuildLog>
+      <Path>..\Build\obj\Win-x86\Debug\$(ProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Header Files\Engine Code\Game.h" />
+    <ClInclude Include="..\src\Header Files\Engine Code\Input.h" />
+    <ClInclude Include="..\src\Header Files\Engine Code\Music.h" />
+    <ClInclude Include="..\src\Header Files\Engine Code\Screen.h" />
+    <ClInclude Include="..\src\Header Files\Engine Code\Text.h" />
+    <ClInclude Include="..\src\Header Files\Engine Code\Texture.h" />
+    <ClInclude Include="..\src\Header Files\Engine Code\Utility.h" />
+    <ClInclude Include="..\src\Header Files\Engine Code\Vector.h" />
+    <ClInclude Include="..\src\Header Files\Game Code\GameControls.h" />
+    <ClInclude Include="..\src\Header Files\Game Code\GuessMyNumber.h" />
+    <ClInclude Include="..\src\Header Files\Game Code\Player.h" />
+    <ClInclude Include="..\src\Header Files\Game Code\Save.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Source Files\Engine Code\Game.cpp" />
+    <ClCompile Include="..\src\Source Files\Engine Code\Input.cpp" />
+    <ClCompile Include="..\src\Source Files\Engine Code\Music.cpp" />
+    <ClCompile Include="..\src\Source Files\Engine Code\Screen.cpp" />
+    <ClCompile Include="..\src\Source Files\Engine Code\Text.cpp" />
+    <ClCompile Include="..\src\Source Files\Engine Code\Texture.cpp" />
+    <ClCompile Include="..\src\Source Files\Engine Code\Utility.cpp" />
+    <ClCompile Include="..\src\Source Files\Game Code\GameControls.cpp" />
+    <ClCompile Include="..\src\Source Files\Game Code\GuessMyNumber.cpp" />
+    <ClCompile Include="..\src\Source Files\Game Code\Player.cpp" />
+    <ClCompile Include="..\src\Source Files\Game Code\Save.cpp" />
+    <ClCompile Include="..\src\Source Files\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Notes.txt" />
+    <None Include="..\README.md" />
+    <None Include="..\premake5.lua" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Important">
+      <UniqueIdentifier>{A3CA577A-0F35-0CF1-5873-BD96C41CEA45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Header Files">
+      <UniqueIdentifier>{9891A1A3-848A-C0F5-ADBC-A57A9914A001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Header Files\Engine Code">
+      <UniqueIdentifier>{38AEC083-2469-B02F-CD20-297AB9BAFABF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Header Files\Game Code">
+      <UniqueIdentifier>{DCAD8A58-C8BD-3629-3177-9B471DA625C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Source Files">
+      <UniqueIdentifier>{606E1EE2-4C67-3D34-7599-22B961F11C40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Source Files\Engine Code">
+      <UniqueIdentifier>{00F7A60A-ECB1-96B6-9569-0F018103E146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Source Files\Game Code">
+      <UniqueIdentifier>{A42438BE-9034-E48E-F9ED-48ADE51CD327}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Header Files\Engine Code\Game.h">
+      <Filter>src\Header Files\Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Engine Code\Input.h">
+      <Filter>src\Header Files\Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Engine Code\Music.h">
+      <Filter>src\Header Files\Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Engine Code\Screen.h">
+      <Filter>src\Header Files\Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Engine Code\Text.h">
+      <Filter>src\Header Files\Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Engine Code\Texture.h">
+      <Filter>src\Header Files\Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Engine Code\Utility.h">
+      <Filter>src\Header Files\Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Engine Code\Vector.h">
+      <Filter>src\Header Files\Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Game Code\GameControls.h">
+      <Filter>src\Header Files\Game Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Game Code\GuessMyNumber.h">
+      <Filter>src\Header Files\Game Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Game Code\Player.h">
+      <Filter>src\Header Files\Game Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Header Files\Game Code\Save.h">
+      <Filter>src\Header Files\Game Code</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Source Files\Engine Code\Game.cpp">
+      <Filter>src\Source Files\Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Engine Code\Input.cpp">
+      <Filter>src\Source Files\Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Engine Code\Music.cpp">
+      <Filter>src\Source Files\Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Engine Code\Screen.cpp">
+      <Filter>src\Source Files\Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Engine Code\Text.cpp">
+      <Filter>src\Source Files\Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Engine Code\Texture.cpp">
+      <Filter>src\Source Files\Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Engine Code\Utility.cpp">
+      <Filter>src\Source Files\Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Game Code\GameControls.cpp">
+      <Filter>src\Source Files\Game Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Game Code\GuessMyNumber.cpp">
+      <Filter>src\Source Files\Game Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Game Code\Player.cpp">
+      <Filter>src\Source Files\Game Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Game Code\Save.cpp">
+      <Filter>src\Source Files\Game Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Source Files\Main.cpp">
+      <Filter>src\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Notes.txt">
+      <Filter>Important</Filter>
+    </None>
+    <None Include="..\README.md">
+      <Filter>Important</Filter>
+    </None>
+    <None Include="..\premake5.lua">
+      <Filter>Important</Filter>
+    </None>
+  </ItemGroup>
+</Project>
